@@ -1,5 +1,5 @@
 <template>
-   <p>ここはテストページ3です。</p>
+   <p>ここは設定です。</p>
 </template>
 
 <script>

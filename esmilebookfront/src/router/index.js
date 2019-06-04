@@ -1,25 +1,50 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import page1 from '@/components/page1'
-import page2 from '@/components/page2'
-import page3 from '@/components/page3'
+import top from '@/pages/Top'
+import timeline from '@/pages/TimeLine'
+import mypage from '@/pages/MyPage'
+import others from '@/pages/Others'
+import search from '@/pages/Search'
+import config from '@/pages/Config'
+import chat from '@/pages/Chat'
+import friend from '@/pages/Config'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-        path: '/page1',
-        component: page1
+        path: '/',
+        component: top
     },
     {
-        path: '/page2',
-        component: page2
+        path: '/timeline',
+        component: timeline
     },
     {
-        path: '/page3',
-        component: page3
+        path: '/mypage',
+        component: mypage
+    },
+    {
+        path: '/others',
+        component: others
+    },
+    {
+        path: '/search',
+        component: search
+    },
+    {
+        path: '/config',
+        component: config
+    },
+    {
+        path: '/chat',
+        component: chat
+    },
+    {
+        path: '/friend',
+        component: friend
     }
   ]
 })

@@ -1,13 +1,19 @@
 <template>
   <div id="header">
-    <p><a>ロゴ</a></p>
+    <p><router-link v-bind:to="'/timeline'">
+      {{ "ロゴ" }}
+      </router-link>
+    </p>
     <input placeholder="検索">
     <p v-for="(item, index) in items" :key=index>
-        <router-link v-bind:to=item.path>
-        {{ item.title }}
-        </router-link>
+      <router-link v-bind:to=item.path>
+      {{ item.title }}
+      </router-link>
     </p>
-    <p><a>垢</a></p>
+    <p><router-link v-bind:to="'/mypage'">
+      {{ "垢" }}
+      </router-link>
+    </p>
   </div>
 </template>
 
@@ -17,11 +23,11 @@ export default {
   data () {
     return {
       items: [
-        { title: '友達一覧', path: '/page1' },
-        { title: 'チャット', path: '/page2' },
-        { title: 'タイムライン', path: '/page3' },
-        { title: '通知', path: '' },
-        { title: '設定', path: '' },
+        { title: 'タイムライン', path: '/timeline' },
+        { title: 'チャット', path: '/chat' },
+        { title: '友達一覧', path: '/friend' },
+        { title: '通知', path: '/' },
+        { title: '設定', path: '/config' },
       ]
     }
   }
@@ -31,6 +37,10 @@ export default {
 <style scoped>
 
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 40px;
   background: rgb(255, 175, 2);
   box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
