@@ -17,7 +17,7 @@ export default new Router({
   routes: [
     {
 
-        path: '/',
+        path: '/top',
         component: top
     },
     {
