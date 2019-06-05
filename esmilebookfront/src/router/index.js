@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+
 import top from '@/pages/Top'
 import timeline from '@/pages/TimeLine'
 import mypage from '@/pages/MyPage'
@@ -15,7 +16,8 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-        path: '/',
+
+        path: '/top',
         component: top
     },
     {

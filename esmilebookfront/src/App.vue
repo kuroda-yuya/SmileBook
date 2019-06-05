@@ -1,4 +1,5 @@
 <template>
+
   <div id="app">
     <!-- <Header/> -->
     <main-header/>
@@ -7,6 +8,8 @@
 </template>
 
 <script>
+
+import HelloWorld from './components/top.vue'
 
 export default {
   name: 'app',
