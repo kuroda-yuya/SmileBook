@@ -1,15 +1,20 @@
 <template>
+
   <div id="app">
     <!-- <Header/> -->
     <main-header/>
+    <chat-tab/>
+    <!-- <chat-box/> -->
     <router-view/>
   </div>
 </template>
 
 <script>
 
+import HelloWorld from './components/top.vue'
+
 export default {
-  name: 'app',
+  name: 'app'
 }
 </script>
 

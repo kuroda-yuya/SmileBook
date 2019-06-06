@@ -19,14 +19,13 @@
 
 <script>
 export default {
-  name: 'TabMenu',
   data () {
     return {
       items: [
         { title: 'タイムライン', path: '/timeline' },
         { title: 'チャット', path: '/chat' },
         { title: '友達一覧', path: '/friend' },
-        { title: '通知', path: '/' },
+        { title: '通知', path: '/top' },
         { title: '設定', path: '/config' },
       ]
     }
@@ -47,15 +46,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-ol {
-  margin: auto;
-  width: 450px;
-  display:flex;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
 }
 
 p {
