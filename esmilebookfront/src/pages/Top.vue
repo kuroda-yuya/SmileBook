@@ -9,13 +9,13 @@
          
          <div id="login"><!--ログイン-->
             <div class="login-foam"><!--Mail・TEL-->
-               <p>{{ loginaccountname }}</p>
-               <input placeholder="address.TEL" id="login_name" v-model="loginaccountname">
+               <p>{{ loginaccountName }}</p>
+               <input placeholder="address.TEL" id="login_name" v-model="loginaccountName">
             </div>
 
             <div class="login-foam"><!--pass-->
-               <p>{{ loginaccountpass }}</p>
-               <input placeholder="pass" id="login_pass" v-model="loginaccountpass">
+               <p>{{ loginaccountPass }}</p>
+               <input placeholder="pass" id="login_pass" v-model="loginaccountPass">
             </div>
 
             <div id="login_button"><!--button-->
@@ -42,24 +42,24 @@
 
                <div class="account-foam registration_name"><!--pass-->
                   <div>
-                     <p>{{ registrationaccountpass }}</p>
-                     <input placeholder="性" id="registration_lastname" v-model="loginaccountpass">
+                     <p>{{ registrationLastname }}</p>
+                     <input placeholder="性" id="registration_lastname" v-model="registrationLastname">
                   </div>
                      
                   <div>
-                     <p>{{ registrationaccountpass }}</p>
-                     <input placeholder="名" id="registration_firstname" v-model="loginaccountpass">
+                     <p>{{ registrationFirstname }}</p>
+                     <input placeholder="名" id="registration_firstname" v-model="registrationFirstname">
                   </div>
                </div>
 
                <div class="account-foam"><!--pass-->
-                  <p>{{ loginaccountpass }}</p>
-                  <input placeholder="電話番号" id="registration_tel" v-model="loginaccountpass">
+                  <p>{{ registrationTel }}</p>
+                  <input placeholder="電話番号" id="registration_tel" v-model="registrationTel">
                </div>
 
-               <div class="account-foam"><!--pass-->
-                  <p>{{ loginaccountpass }}</p>
-                  <input placeholder="メールアドレス" id="registration_mail" v-model="loginaccountpass">
+               <div class="registrationMail"><!--pass-->
+                  <p>{{ registrationMail }}</p>
+                  <input placeholder="メールアドレス" id="registration_mail" v-model="registrationMail">
                </div>
 
                <div class="account-foam"><!--pass-->
@@ -84,8 +84,8 @@
                </div>
                
                <div class="account-foam"><!--pass-->
-                  <p>{{ loginaccountpass }}</p>
-                  <input placeholder="パスワード" id="registration_pass" v-model="loginaccountpass">
+                  <p>{{ registrationPass }}</p>
+                  <input placeholder="パスワード" id="registration_pass" v-model="registrationPass">
                </div>
 
                <div id="registration_button"><!--button-->
