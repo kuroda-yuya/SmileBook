@@ -16,7 +16,8 @@ Vue.component('chat-tab', ChatTab)
 Vue.component('chat-box', ChatBox)
 
 new Vue({
+  el: '#app',
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+})

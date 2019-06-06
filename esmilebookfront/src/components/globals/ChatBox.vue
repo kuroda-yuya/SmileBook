@@ -1,11 +1,14 @@
 <template>
-  <div id="chat_box" >
+  <div>
     <div v-for="(value,index) in message" :key=index>
-      <div id="chat_box_button" v-on:click="greet">
-        {{ value.name }}
-      </div>
-      <div id="chat_box_content">
-        content
+      <div id="chat_box">
+        <div id="chat_box_button" v-on:click="greet">
+          {{ value.name }}
+          <input id="button" type="button" v-on:click="btn" :value= value.name>
+        </div>
+        <div id="chat_box_content">
+          content
+        </div>
       </div>
     </div>
   </div>
@@ -16,12 +19,16 @@ let showChat = true
 
 export default {
   props: {
-    message: String
+    message: Array
   },
   methods: {
     greet: function (event) {
       if (event) {
+        let a = document.querySelectorAll('#chat_box')
+
         let parent = event.target.parentNode
+
+        if (event.target.id == 'button') return
 
         if (showChat) {
           showChat = false
@@ -35,7 +42,35 @@ export default {
           parent.children[1].style.display = 'none'
         }
       }
+    },
+    btn: function (event) {
+      if(event) {
+        for (let i = 0; i < this.message.length; i++) {
+          if (this.message[i].name == event.target.value) {
+            this.$parent.testdata.splice(i, 1)
+            break
+          }
+        }
+      }
+    },
+    up: function () {
+      let a = document.querySelectorAll("#chat_box")
+
+      // if (a.length == 0) {
+      //   let b = document.getElementById('chat_box')
+      //   console.log(b)
+      //   return
+      // }
+
+      for(let i = 0; i < a.length; i++)
+      {
+        a[i].style.right = (i + 1) * 200 + "px"
+      }
     }
+  },
+  mounted: function (){
+    // let a = document.getElementsByClassName('chat_box')
+    // console.log(a)
   }
 }
 </script>

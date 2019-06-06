@@ -25,8 +25,8 @@ export default {
         { title: 'タイムライン', path: '/timeline' },
         { title: 'チャット', path: '/chat' },
         { title: '友達一覧', path: '/friend' },
-        { title: '通知', path: '/' },
-        { title: '設定', path: '/config' }
+        { title: '通知', path: '/top' },
+        { title: '設定', path: '/config' },
       ]
     }
   }

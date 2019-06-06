@@ -13,7 +13,7 @@
     </div>
     <!-- <div v-for="(value,index) in testdata" :key=index> -->
         <!-- <chat-box :message="msg"/> -->
-        <chat-box :message="testdata"/>
+        <chat-box ref="ber" :message="testdata"/>
     <!-- </div> -->
   </div>
 </template>
@@ -26,9 +26,7 @@ export default {
   data () {
     return {
       testdata:[
-        {
-          id: '', name: '',
-        }
+        // { id: '', name: ''},
       ]
     }
   },
@@ -51,10 +49,37 @@ export default {
     test: function (event) {
       if (event) {
         let tes = document.getElementById("chat_box")
-        let test_a = event.target.value;
+        let test_a = event.target.value
+        let flag = false
+
+        if(this.testdata.length == 0)
+        {
+           this.testdata.push({id:'0', name: ''})
+        }
+
+        for (let i of this.testdata) {
+          if (i.name == test_a) {
+            flag = false
+            break
+          } else {
+            flag = true
+          }
+        }
+
+        if (flag) {
+          this.testdata.push({id:'', name: test_a})
+        }
+
+        if (this.testdata[0].name == '') {	
+          this.testdata.splice(0, 1)
+        }
+
+        this.$refs.ber.up()
 
         // this.$set(this.testdata, [{id:'', name: test_a}])
-        this.testdata = Object.assign({}, this.testdata, [{id: '', name: test_a}])
+        //this.testdata.push({id:'', name: test_a})
+
+        // this.testdata = Object.assign({}, this.testdata, [{id: '', name: test_a}])
 
         // if (showChatBox) {
         //   showChatBox = false
