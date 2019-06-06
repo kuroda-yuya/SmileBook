@@ -2,6 +2,8 @@
   <div id="app">
     <!-- <Header/> -->
     <main-header/>
+    <chat-tab/>
+    <!-- <chat-box/> -->
     <router-view/>
   </div>
 </template>
@@ -9,7 +11,7 @@
 <script>
 
 export default {
-  name: 'app',
+  name: 'app'
 }
 </script>
 

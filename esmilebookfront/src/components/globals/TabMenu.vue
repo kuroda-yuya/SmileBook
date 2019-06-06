@@ -19,7 +19,6 @@
 
 <script>
 export default {
-  name: 'TabMenu',
   data () {
     return {
       items: [
@@ -27,7 +26,7 @@ export default {
         { title: 'チャット', path: '/chat' },
         { title: '友達一覧', path: '/friend' },
         { title: '通知', path: '/' },
-        { title: '設定', path: '/config' },
+        { title: '設定', path: '/config' }
       ]
     }
   }
@@ -47,15 +46,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-ol {
-  margin: auto;
-  width: 450px;
-  display:flex;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
 }
 
 p {
